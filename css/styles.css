@@ -553,6 +553,7 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form-title{
+    display: flex;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -562,7 +563,12 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     text-transform: uppercase;
     color: var(--primary-white-color);
     margin-bottom: 20px;
-    margin-bottom: 20px;
+}
+
+.footer-form-input-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-form-input{
@@ -587,10 +593,9 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .footer-form-button{
     display: flex;
     align-items: center;
-    justify-content: center;
-    outline: none;
-    width: 200px;
-    height: 50px;
+    justify-content: space-between;
+    border: none;
+    padding: 10px 28px;
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -602,7 +607,6 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.06em;
     color: var(--primary-white-color);
     cursor: pointer;
-    margin-top: 47px;
 }
 
 .footer-form-icon{
@@ -714,6 +718,8 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 528px;
     height: 581px;
     background-color: var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -742,6 +748,11 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .modal-close-btn:focus .backdrop-close-icon,
 .modal-close-btn:hover .backdrop-close-icon{
     fill: var(--accent-color);
+}
+
+.modal-close-btn:focus,
+.modal-close-btn:hover{
+    outline: none;
 }
 
 .portfolio-cards-img-container{
@@ -808,6 +819,7 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+    margin-bottom: 12px;
 }
 
 .contact-form-field-title{
@@ -818,10 +830,8 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--primary-text-color);
-    margin-bottom: 4px;
-    margin-top: 12px;
-}
-
+    }
+  
 .contact-form-icon{
     position: absolute;
     top: 50%;
@@ -833,6 +843,7 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .contact-form-input-wrapper{
     position: relative;
     display: block;
+    margin-top: 4px;
 }
 
 .contact-form-input-message{
@@ -861,7 +872,6 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--primary-text-color);
     display: flex;
     align-items: center;
-
 }
 
 .contact-form-checkbox-label::before{
@@ -870,15 +880,16 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 16px;
     height: 15px;
     cursor: pointer;
+    margin-left: 12px;
     margin-right: 8px;
     border: 1px solid #000000;
     box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
     transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-checkbox:checked + .contact-form-checkbox-label::before{
-    outline: none;
+    border: none;
     background-color: var(--accent-color);
     border-radius: 2px;
     background-image: url('../img/Check.svg');
@@ -886,10 +897,9 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-position: center;
 }
 
-.contact-form-checkbox:focus + .contact-form-checkbox-label::before
-.contact-form-checkbox:hover + .contact-form-checkbox-label::before{
-    /* outline: 1px solid #2196F3; */
-    outline: none;
+.contact-form-checkbox:focus + .contact-form-checkbox-label::before{
+   outline: 1px solid #2196F3;
+   border: none;
 }
 
 .contact-form-checkbox-wrapper{
@@ -897,9 +907,8 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-button{
-    width: 200px;
-    height: 50px;
-    outline: none;
+    padding: 10px 55px 10px 55px;
+    border: none;
     background-color: #2196F3;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -919,4 +928,16 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .contact-form-button:focus,
 .contact-form-button:hover{
     background-color: #188CE8;
+    outline: none;
+}
+
+.contract-conditions-link{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+    text-decoration-line: underline;
 }

@@ -376,15 +376,18 @@
             </div>
                 
                 <form class="footer-mail-form">
-                    <b class="footer-form-title">Подпишитесь на рассылку</b>
-                    <input type="email" class="footer-form-input" placeholder="E-mail" name="user-email" required>
+                    <p class="footer-form-title">Подпишитесь на рассылку</p>
+                    <div class="footer-form-input-wrapper">
+                        <input type="email" class="footer-form-input" placeholder="E-mail" name="user-email" required>
+                        <button type="submit" class="footer-form-button">
+                            Подписаться
+                            <svg class="footer-form-icon" height="24" width="24">
+                                <use href="./img/symbol-defs.svg#icon-send"></use>
+                            </svg>
+                        </button>    
+                    </div>
                 </form>
-                <button type="submit" class="footer-form-button">
-                    Подписаться
-                    <svg class="footer-form-icon" height="24" width="24">
-                        <use href="./img/symbol-defs.svg#icon-send"></use>
-                    </svg>
-                </button>
+                
         </div>
    </footer>
 
@@ -396,7 +399,7 @@
                 </svg>
             </button>
             <form class="contact-form">
-                <b class="backdrop-title">Оставьте свои данные, мы вам перезвоним</b>
+                <p class="backdrop-title">Оставьте свои данные, мы вам перезвоним</p>
                 <label class="contact-form-field">
                     <span class="contact-form-field-title">Имя</span> 
                     <span class="contact-form-input-wrapper">
@@ -434,7 +437,9 @@
 
                 <div class="contact-form-checkbox-wrapper">
                     <input type="checkbox" name="accept-policy" class="contact-form-checkbox visually-hidden" id="policy-checkbox" required />
-                    <label for="policy-checkbox" class="contact-form-checkbox-label">Соглашаюсь с рассылкой и принимаю&nbsp;<a href="">Условия договора</a></label>
+                    <label for="policy-checkbox" class="contact-form-checkbox-label">Соглашаюсь с рассылкой и принимаю&nbsp;
+                        <a href=""><span class="contract-conditions-link">Условия договора</span></a>
+                    </label>
                 </div>
 
                 <button type="submit" class="contact-form-button">Отправить</button>

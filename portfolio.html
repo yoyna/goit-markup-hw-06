@@ -247,16 +247,19 @@
                         </li>
                 </ul>
             </div>
+
             <form class="footer-mail-form">
-                <b class="footer-form-title">Подпишитесь на рассылку</b>
-                <input type="email" class="footer-form-input" placeholder="E-mail" name="user-email" required>
+                    <p class="footer-form-title">Подпишитесь на рассылку</p>
+                    <div class="footer-form-input-wrapper">
+                        <input type="email" class="footer-form-input" placeholder="E-mail" name="user-email" required>
+                        <button type="submit" class="footer-form-button">
+                            Подписаться
+                            <svg class="footer-form-icon" height="24" width="24">
+                                <use href="./img/symbol-defs.svg#icon-send"></use>
+                            </svg>
+                        </button>    
+                    </div>
             </form>
-            <button type="submit" class="footer-form-button">
-                Подписаться
-                <svg class="footer-form-icon" height="24" width="24">
-                    <use href="./img/symbol-defs.svg#icon-send"></use>
-                </svg>
-            </button>
          </div>
    </footer>
 
